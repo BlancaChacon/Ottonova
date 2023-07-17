@@ -1,0 +1,156 @@
+/* ------general styles----- */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* background: var(--colorbackground); */
+    font-family: Figtree;
+    color: var(--colorh1);
+    /* background-image: url(./background_fun.png); */
+}
+:root {
+    --cfondo: rgb(1, 80, 80, 0.39);
+    --cfondo2: rgb(129, 193, 202);
+    --colorh1:#00104b;
+    --colorborder: #9b9eba;
+    --colorbackground: rgb(207, 211, 212);
+    --h1sign-up: 'Figtree';
+    ----text-heading: ##00104b;
+    --color-tex-in: #999fb7;
+    --send-botton-color: #07f;
+    --send-botton-hover-color: #006be6;
+    --errorMessage: #f65c96;
+}
+[type= "checkbox"] {
+    display: none;
+}
+[type= "checkbox"]:checked + label::before{
+    background: black;
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+[type= "checkbox"]:checked + label{
+    color: black;
+}
+
+div.main-content {
+    /* border: 3px solid var(--colorborder); */
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/* ------Form styles----- */
+
+form div.logo img{
+    /* position: relative;
+    display: inline-block; */
+    width: 128px;
+    height: 128px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+
+form.form-container {
+    /* border-top: 2px solid black;
+    border: 3px solid green; */
+    border-radius: 20px;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    background: linear-gradient(var(--cfondo2)0%, var(--cfondo)50%);
+}
+
+h1.sign-up{
+    font-style: var(--h1sign-up);
+    color: var(----text-heading);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.form_input {
+    margin-bottom: 30px;
+}
+
+.form_input label{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--color-tex-in);
+}
+
+div.form_input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid var(--color-tex-in);
+}
+
+div.form_input input:focus + label{
+    font-weight: bold;
+    color: #3392ff;
+    transition: 0.5s;
+    transform: translateY(-40px) stop;
+    
+}
+
+div.form_input input:focus {
+    border-bottom: 1px solid #3392ff;
+
+}
+
+.checkbox-termsAndConditions {
+    margin-left: 15px;
+    position: relative;
+    color: var(--color-tex-in);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.checkbox-termsAndConditions label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    position: absolute;
+    top: 2px;
+    left: -14px;
+}
+.send-button input{
+    background: var(--send-botton-color);
+    color: white;
+    padding:  10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 56px;
+    border: none;
+    border-radius: 10px;
+}
+.send-button input:hover {
+    background: var(--send-botton-hover-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.errorMessage {
+    color: var(--errorMessage);
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.correctMessage {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
